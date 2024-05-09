@@ -1,5 +1,12 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
+        <file>TopBar.qml</file>
+        <file>SearchBar.qml</file>
+        <file>ContactItem.qml</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file>add_icon.png</file>
+        <file>userIcon.png</file>
     </qresource>
 </RCC>
