@@ -4,9 +4,13 @@
         <file>TopBar.qml</file>
         <file>SearchBar.qml</file>
         <file>ContactItem.qml</file>
+        <file>AddContact.qml</file>
+        <file>WelcomePage.qml</file>
+        <file>TopBarAddContact.qml</file>
     </qresource>
     <qresource prefix="/images">
         <file>add_icon.png</file>
         <file>userIcon.png</file>
+        <file>arrow-left.png</file>
     </qresource>
 </RCC>

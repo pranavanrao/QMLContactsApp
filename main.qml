@@ -11,118 +11,25 @@ Window {
     title: qsTr("Contacts App")
     color: "#121212"
 
-    ListModel {
-        id: listModel
-        ListElement {
-            name: "Pranav"
-            number: "1234567890"
-        }
+    StackView {
+        id: stack
+        anchors.fill: parent
+        initialItem: mainView
+    }
 
-        ListElement {
-            name: "Pranav"
-            number: "1234567890"
-        }
-
-        ListElement {
-            name: "Pranav"
-            number: "1234567890"
-        }
-
-        ListElement {
-            name: "Pranav"
-            number: "1234567890"
-        }
-
-        ListElement {
-            name: "Pranav"
-            number: "1234567890"
-        }
-
-        ListElement {
-            name: "Pranav"
-            number: "1234567890"
-        }
-
-        ListElement {
-            name: "Pranav"
-            number: "1234567890"
-        }
-
-        ListElement {
-            name: "Pranav"
-            number: "1234567890"
-        }
-
-        ListElement {
-            name: "Pranav"
-            number: "1234567890"
-        }
-
-        ListElement {
-            name: "Pranav"
-            number: "1234567890"
-        }
-
-        ListElement {
-            name: "Pranav"
-            number: "1234567890"
-        }
-
-
-        ListElement {
-            name: "Pranav"
-            number: "1234567890"
-        }
-
-        ListElement {
-            name: "Pranav"
-            number: "1234567890"
-        }
-
-
-        ListElement {
-            name: "Pranav"
-            number: "1234567890"
-        }
-
-        ListElement {
-            name: "Pranav"
-            number: "1234567890"
-        }
-
-        ListElement {
-            name: "Pranav"
-            number: "1234567890"
-        }
-
-        ListElement {
-            name: "Pranav"
-            number: "1234567890"
+    Component {
+        id: mainView
+        WelcomePage {
+            width: root_main.width
+            height: root_main.height
         }
     }
 
-    Column {
-        anchors.fill: parent
-        spacing: 5
-        TopBar {
-            id: topBar
-            width: parent.width
-            height: parent.height * 0.1
-
-            z: 10
-        }
-
-        ListView {
-            model: listModel
-
-            width: parent.width
-            height: parent.height
-            anchors.margins: 15
-
-            delegate: ContactItem {
-                height: 80
-                username: name
-            }
+    Component {
+        id: addContactsView
+        AddContact {
+            width: root_main.width
+            height: root_main.height
         }
     }
 }

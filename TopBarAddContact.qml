@@ -7,9 +7,8 @@ Rectangle {
 
     z: 5
 
-    property string labelTxt : "Contacts"
-    property url icon : "qrc:/images/add_icon.png"
-    property url stackUrl: "qrc:/AddContact.qml"
+    property string labelTxt : "Add new contact"
+    property url icon : "qrc:/images/arrow-left.png"
 
     Text {
         id: headerText
@@ -36,7 +35,7 @@ Rectangle {
             anchors.fill: parent
 
             onClicked: {
-                stack.push("qrc:/AddContact.qml")
+                stack.pop()
             }
         }
     }
